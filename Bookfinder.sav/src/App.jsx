@@ -7,7 +7,9 @@ import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   const [getBook, setGetBook] = useState([]); //for getting data
-  
+  const [itemPerPage, setItemPerPage] = useState(6);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pagBook, setPagBook] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -23,7 +25,11 @@ function App() {
   }, []);
 
   // Pagination
-  
+  useEffect(() => {
+    let start = (currentPage - 1) * itemPerPage;
+    let end = start + itemPerPage;
+    setPagBook(getBook.slice(start, end));
+  }, [currentPage, itemPerPage, getBook]);
 
   return (
     <div className="main_container">
