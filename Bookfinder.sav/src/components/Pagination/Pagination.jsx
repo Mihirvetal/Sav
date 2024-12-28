@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 const Pagination = ({ itemPerPage, dataLength,currentPage }) => {
   // console.log(dataLength);
   // console.log(itemPerPage);
   let pageArray = [];
   for (let i = 1; i <= Math.ceil(dataLength / itemPerPage); i++) {
     pageArray.push(i);
-    console.log(i);
+    
   }
 
   return (

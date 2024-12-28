@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 
 
 const Book = ({ title, subtitle, authors, image }) => {
     
-  
     return (
       <div className="bookCard">
         <img 

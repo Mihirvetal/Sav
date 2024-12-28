@@ -1,6 +1,8 @@
 import Book from "../Book/Book";
 
+// eslint-disable-next-line react/prop-types
 const BooksData = ({ getBook }) => {
+   
   return (
     <div className="bookGrid">
       {getBook.map((book) => (
