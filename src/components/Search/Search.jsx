@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import { useState } from "react";
 
 const Search = ({setQuery}) => {
@@ -14,7 +15,7 @@ const Search = ({setQuery}) => {
 
   return (
     <div>
-        <input type="search" name="search" id="search"  onChange={(e)=> setQuery(e.target.value)} />
+        <input type="search"  name="search" id="search" placeholder="Search the Books...." onChange={(e)=> setQuery(e.target.value)} />
 
 
     </div>
